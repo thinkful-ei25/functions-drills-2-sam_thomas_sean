@@ -28,3 +28,34 @@ function beyond(num){
 beyond(Number.POSITIVE_INFINITY); 
 
 //console.log(checkBeyond); 
+
+function decode(word){
+    let arr = word.split(" ");
+    let arr2 = arr.map(function(a){
+        return a.slice(0,1);
+    });
+    let answer ="";
+   for(let i=0; i<arr.length;i++){
+        switch(arr2[i]){
+            case 'a':
+                answer += arr[i][1];
+                break;
+            case 'b':
+                answer += arr[i][2];
+                break;
+            case 'c':
+                answer += arr[i][3];
+                break;
+            case 'd':
+                answer += arr[i][4];
+                break;
+            default:
+                answer += ' ';
+        }
+    }
+    return answer;
+    
+}
+
+let decode1  = decode('craft block argon meter bells brown croon droop');
+console.log(decode1);
